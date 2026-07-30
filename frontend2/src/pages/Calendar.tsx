@@ -18,7 +18,7 @@ function Calendar() {
   const [events, setEvents] = useState<Event[]>([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/events")
+    fetch("https://getsynced-production.up.railway.app/tasks")
       .then((response) => response.json())
       .then((data) => {
         const convertedEvents = data.map((event: any) => {
@@ -72,7 +72,7 @@ function Calendar() {
 
     const formattedDate = `${year}-${month}-${day}`;
 
-    const response = await fetch("http://127.0.0.1:8000/events", {
+    const response = await fetch("https://getsynced-production.up.railway.app/tasks", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -109,7 +109,7 @@ function Calendar() {
 
     if (!confirmed) return;
 
-    await fetch(`http://127.0.0.1:8000/events/${idToDelete}`, {
+    await fetch(`https://getsynced-production.up.railway.app/tasks/${idToDelete}`, {
       method: "DELETE",
     });
 
@@ -128,7 +128,7 @@ function Calendar() {
 
     if (trimmedTitle === "") return;
 
-    const response = await fetch(`http://127.0.0.1:8000/events/${idToEdit}`, {
+    const response = await fetch(`https://getsynced-production.up.railway.app/tasks/${idToEdit}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

@@ -10,7 +10,7 @@ function Notes() {
   const [notes, setNotes] = useState<Note[]>([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/notes")
+    fetch("https://getsynced-production.up.railway.app/tasks")
       .then((response) => response.json())
       .then((data) => setNotes(data));
   }, []);
@@ -18,7 +18,7 @@ function Notes() {
   async function addNote() {
     if (note.trim() === "") return;
 
-    const response = await fetch("http://127.0.0.1:8000/notes", {
+    const response = await fetch("https://getsynced-production.up.railway.app/tasks", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -41,7 +41,7 @@ function Notes() {
 
     const noteToDelete = notes[indexToDelete];
 
-    await fetch(`http://127.0.0.1:8000/notes/${noteToDelete.id}`, {
+    await fetch(`https://getsynced-production.up.railway.app/tasks/notes/${noteToDelete.id}`, {
       method: "DELETE",
     });
 

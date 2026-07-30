@@ -27,15 +27,15 @@ function Dashboard() {
   const [events, setEvents] = useState<Event[]>([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/tasks")
+    fetch("https://getsynced-production.up.railway.app/tasks")
       .then((response) => response.json())
       .then((data) => setTasks(data));
 
-    fetch("http://127.0.0.1:8000/notes")
+    fetch("https://getsynced-production.up.railway.app/tasks")
       .then((response) => response.json())
       .then((data) => setNotes(data));
 
-    fetch("http://127.0.0.1:8000/events")
+    fetch("https://getsynced-production.up.railway.app/tasks")
       .then((response) => response.json())
       .then((data) => setEvents(data));
   }, []);
