@@ -24,7 +24,7 @@ function AI() {
     ]);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/agent", {
+      const response = await fetch("https://getsynced-production.up.railway.app/plan-day", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -70,7 +70,7 @@ function AI() {
     ]);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/plan-day", {
+      const response = await fetch("https://getsynced-production.up.railway.app/plan-day", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -112,7 +112,7 @@ function AI() {
     ]);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/prioritize-tasks", {
+      const response = await fetch("https://getsynced-production.up.railway.app/plan-day", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -154,7 +154,7 @@ function AI() {
     ]);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/summarize-notes", {
+      const response = await fetch("https://getsynced-production.up.railway.app/plan-day", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
