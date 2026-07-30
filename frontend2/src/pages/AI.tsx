@@ -24,7 +24,7 @@ function AI() {
     ]);
 
     try {
-      const response = await fetch("https://getsynced-production.up.railway.app/plan-day", {
+      const response = await fetch("https://getsynced-production.up.railway.app/agent", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
