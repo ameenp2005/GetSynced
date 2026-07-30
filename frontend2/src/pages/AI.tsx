@@ -112,7 +112,7 @@ function AI() {
     ]);
 
     try {
-      const response = await fetch("https://getsynced-production.up.railway.app/plan-day", {
+      const response = await fetch("https://getsynced-production.up.railway.app/prioritize-tasks", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -154,7 +154,7 @@ function AI() {
     ]);
 
     try {
-      const response = await fetch("https://getsynced-production.up.railway.app/plan-day", {
+      const response = await fetch("https://getsynced-production.up.railway.app/summarize-notes", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
