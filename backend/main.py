@@ -290,6 +290,8 @@ action = chat
     )
 
     result = response.output_parsed
+    print("ACTION:", result.action)
+    print(result)
 
     if result.action == "create_task":
         new_task = Task(
