@@ -326,7 +326,8 @@ action = chat
 
     elif result.action == "create_event":
         if result.time is None:
-        result.time = "12:00"
+            result.time = "12:00"
+            
         new_event = Event(
             title=result.title,
             date=result.date,
