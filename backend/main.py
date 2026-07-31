@@ -223,15 +223,17 @@ action = create_note
 
 content = the note content
 
-If the user asks to create an event:
+If the user asks to create an event you MUST always provide:
 
-action = create_event
+action=create_event
 
-title = the event title
+title
 
-date = YYYY-MM-DD
+date in YYYY-MM-DD
 
-time = HH:MM
+time in HH:MM (24-hour format)
+
+If the user did not specify a time, choose a reasonable default such as 18:00.
 
 If the user asks to complete a task:
 
@@ -323,6 +325,8 @@ action = chat
         }
 
     elif result.action == "create_event":
+        if result.time is None:
+        result.time = "12:00"
         new_event = Event(
             title=result.title,
             date=result.date,
