@@ -31,11 +31,11 @@ function Dashboard() {
       .then((response) => response.json())
       .then((data) => setTasks(data));
 
-    fetch("https://getsynced-production.up.railway.app/tasks")
+    fetch("https://getsynced-production.up.railway.app/notes")
       .then((response) => response.json())
       .then((data) => setNotes(data));
 
-    fetch("https://getsynced-production.up.railway.app/tasks")
+    fetch("https://getsynced-production.up.railway.app/events")
       .then((response) => response.json())
       .then((data) => setEvents(data));
   }, []);

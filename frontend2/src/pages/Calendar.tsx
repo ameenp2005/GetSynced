@@ -18,7 +18,7 @@ function Calendar() {
   const [events, setEvents] = useState<Event[]>([]);
 
   useEffect(() => {
-    fetch("https://getsynced-production.up.railway.app/tasks")
+    fetch("https://getsynced-production.up.railway.app/events")
       .then((response) => response.json())
       .then((data) => {
         const convertedEvents = data.map((event: any) => {
@@ -72,7 +72,7 @@ function Calendar() {
 
     const formattedDate = `${year}-${month}-${day}`;
 
-    const response = await fetch("https://getsynced-production.up.railway.app/tasks", {
+    const response = await fetch("https://getsynced-production.up.railway.app/events", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -109,7 +109,7 @@ function Calendar() {
 
     if (!confirmed) return;
 
-    await fetch(`https://getsynced-production.up.railway.app/tasks/${idToDelete}`, {
+    await fetch(`https://getsynced-production.up.railway.app/events/${idToDelete}`, {
       method: "DELETE",
     });
 
@@ -128,7 +128,7 @@ function Calendar() {
 
     if (trimmedTitle === "") return;
 
-    const response = await fetch(`https://getsynced-production.up.railway.app/tasks/${idToEdit}`, {
+    const response = await fetch(`https://getsynced-production.up.railway.app/events/${idToEdit}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
