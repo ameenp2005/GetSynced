@@ -180,9 +180,9 @@ def ai_agent(question: Question, db: Session = Depends(get_db)):
     notes = db.query(Note).all()
 
     task_list = "\n".join(
-        f"{task.title} - {'Completed' if task.completed else 'Not Completed'}"
+        f"{task.id}: {task.title} - {'Completed' if task.completed else 'Not Completed'}"
         for task in tasks
-    )
+)
 
     event_list = "\n".join(f"{event.id}: {event.title}" for event in events)
 
