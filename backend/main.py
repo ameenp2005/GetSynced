@@ -368,6 +368,8 @@ action = chat
         db.delete(task)
         db.commit()
 
+        print("Delete committed")
+
         return {"answer": "🗑️ Task deleted!"}
 
     elif result.action == "rename_task":

@@ -58,7 +58,7 @@ function Tasks() {
   async function toggleComplete(indexToToggle: number) {
     const task = tasks[indexToToggle];
 
-    const response = await fetch(`https://getsynced-production.up.railway.app/tasks/tasks/${task.id}`, {
+    const response = await fetch(`https://getsynced-production.up.railway.app/tasks/${task.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -87,7 +87,7 @@ function Tasks() {
     const task = tasks[editingIndex];
 
     const response = await fetch(
-      `https://getsynced-production.up.railway.app/tasks/tasks/${task.id}/title`,
+      `https://getsynced-production.up.railway.app/tasks/${task.id}/title`,
       {
         method: "PATCH",
         headers: {
