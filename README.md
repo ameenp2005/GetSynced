@@ -1,5 +1,9 @@
 # 🚀 GetSynced
 
+🌐 **Live Demo:** https://get-synced-two.vercel.app
+
+# 🚀 GetSynced
+
 An AI-powered productivity workspace built with **React, TypeScript, FastAPI, PostgreSQL, SQLAlchemy, and OpenAI**.
 
 ---
